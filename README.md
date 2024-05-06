@@ -18,4 +18,4 @@ See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact 
-If you have any questions, please feel free to contact me at [wrabetzluca@gmail.com](wrabetzluca@gmail.com).
+If you have any questions, please feel free to contact me at wrabetzluca@gmail.com.
