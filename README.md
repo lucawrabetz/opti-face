@@ -1,4 +1,4 @@
-# opti-face
+# opti-<span style="color: red;">face</span> :-<span style="color: red;">)</span>
 An (almost) turn-key suite of tools for heavily automated experiments in computational research.
 
 ## Description
