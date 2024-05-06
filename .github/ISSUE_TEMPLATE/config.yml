@@ -1,0 +1,7 @@
+blank_issues_enabled: false
+issue_templates:
+  - name: Documentation Improvement
+    about: Suggest or complete an improvement to project documentation.
+    title: "Documentation: [Improvement Details]"
+    labels: documentation
+    assignees: ''
