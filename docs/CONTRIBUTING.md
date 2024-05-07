@@ -22,7 +22,7 @@ Pull requests are the best way to propose changes to the codebase. We actively w
 7. Wait for your pull request to be reviewed and discussed. Make any necessary updates based on feedback.
 
 ## Any contributions you make will be under the MIT Software License
-In short, when you submit code changes, your submissions are understood to be under the same [MIT License](LICENSE) that covers the project. Feel free to contact the maintainers if that's a concern.
+In short, when you submit code changes, your submissions are understood to be under the same [MIT License](../LICENSE) that covers the project. Feel free to contact the maintainers if that's a concern.
 
 ## Report bugs using Github's [issues](https://github.com/lucawrabetz/opti-face/issues)
 Report a bug by opening a new issue; it's that easy!

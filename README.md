@@ -9,10 +9,10 @@ opti-face provides a robust, easy to implement, and hard-to-mess-up interface fo
 ## Usage
 
 ## Contributing
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md).
 
 ## Code of Conduct
-See [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
+See [CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md).
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
