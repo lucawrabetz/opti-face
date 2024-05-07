@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2024-05-07T05:20:35.572Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15" etag="i4cHw3Et0PIxAWwx3pjD" version="24.3.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-05-07T05:26:26.622Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Safari/605.1.15" etag="VM-xk4gO2KWlPwcggLui" version="24.3.1" type="github">
   <diagram name="Page-1" id="tMpC0LhPOoGcTv_hHfYI">
-    <mxGraphModel dx="2043" dy="809" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2043" dy="844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -52,11 +52,23 @@
         <mxCell id="NSehEJJ4nhmmulNn3Ske-56" value="Passes all experiment configurations and requests&amp;nbsp;&lt;div&gt;experiment initialization, receives logging output.&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=3" vertex="1" parent="1">
           <mxGeometry x="-110" y="420" width="340" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="NSehEJJ4nhmmulNn3Ske-57" value="" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=2;hachureGap=8;fillColor=#f8cecc;fillStyle=dots;sketch=1;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="370" y="40" width="50" height="30" as="geometry" />
+        <mxCell id="NSehEJJ4nhmmulNn3Ske-59" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="355" y="10" width="140" height="140" as="geometry" />
         </mxCell>
-        <mxCell id="NSehEJJ4nhmmulNn3Ske-58" value="" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#fff2cc;sketch=1;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="335" y="70" width="115" height="70" as="geometry" />
+        <mxCell id="NSehEJJ4nhmmulNn3Ske-57" value="" style="ellipse;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=2;hachureGap=8;fillColor=#f8cecc;fillStyle=dots;sketch=1;strokeColor=#b85450;" vertex="1" parent="NSehEJJ4nhmmulNn3Ske-59">
+          <mxGeometry x="40" width="60" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NSehEJJ4nhmmulNn3Ske-58" value="&lt;div style=&quot;font-weight: 700;&quot;&gt;&lt;font size=&quot;3&quot;&gt;Researcher&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 14px; font-weight: 700;&quot;&gt;&lt;i&gt;(End User)&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 14px; font-weight: 700;&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;strokeWidth=2;fillWeight=4;hachureGap=8;hachureAngle=45;fillColor=#fff2cc;sketch=1;strokeColor=#d6b656;" vertex="1" parent="NSehEJJ4nhmmulNn3Ske-59">
+          <mxGeometry y="40" width="140" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="NSehEJJ4nhmmulNn3Ske-61" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NSehEJJ4nhmmulNn3Ske-58" target="NSehEJJ4nhmmulNn3Ske-49">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="450" as="sourcePoint" />
+            <mxPoint x="480" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NSehEJJ4nhmmulNn3Ske-62" value="Interactively configures requests for&amp;nbsp;&lt;div&gt;experiment runs and analytical results.&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=14;fontStyle=3" vertex="1" parent="1">
+          <mxGeometry x="460" y="200" width="260" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
