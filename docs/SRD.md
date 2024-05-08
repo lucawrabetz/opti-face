@@ -1,7 +1,7 @@
 ### Software Requirements Document (SRD) for Opti-Face
 
 #### Preliminaries / Definitions
-**opti-fork**: A fork of the opti-face software framework, customized and implemented for a specific computational problem or research study - this is a fully set-up version of the system ready for use by End Users.
+**opti-fork**: A fork of the opti-face software framework, customized and implemented for a specific computational problem or research study.
 
 #### 1. Introduction
 
