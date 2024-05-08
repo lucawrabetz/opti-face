@@ -18,34 +18,34 @@ The development process assumes that you have a basic familiarity with contribut
     git clone git@github.com:your-username/opti-face.git
     ```
 - Navigate to the project directory and add the upstream repository:
-        ```bash
-        git remote add upstream git@github.com:lucawrabetz/opti-face.git
-        ```
+    ```bash
+    git remote add upstream git@github.com:lucawrabetz/opti-face.git
+    ```
 - Now, you have remote repositories named:
     - `upstream`, which refers to the `opti-face` repository
     - `origin`, which refers to your personal fork
 
 - Add the development requirements to your local environment (this step assumes you have completed the local environment set up in the [installation guide](../README.md). The next step will add the development packages to your *opti-face* environment, whether you used `conda` or `pip`):
-```bash
-pip install -r requirements/requirements-dev.txt
-```
+    ```bash
+    pip install -r requirements/requirements-dev.txt
+    ```
 
 - Install the pre-commit hooks (optional but highly recommended):
-```bash
-pre-commit install
-```
+    ```bash
+    pre-commit install
+    ```
 
 2. If you are a returning contributor, or you have completed step (1), you can develop your contribution:
 - Pull the latest changes from upstream:
-```bash
-git checkout main
-git pull upstream main
-```
+    ```bash
+    git checkout main
+    git pull upstream main
+    ```
 
 - Create a branch for your contribution. Since the branch name will appear in the merge message, use a sensible name such as 'bugfix-for-issue-1234':
-```bash
-git checkout -b bugfix-for-issue-1234 main
-```
+    ```bash
+    git checkout -b bugfix-for-issue-1234 main
+    ```
 
 - Commit locally as you progress using `git add` and `git commit` (TODO: [address style issue wrt commit messages](https://github.com/lucawrabetz/opti-face/issues/4)).
 
