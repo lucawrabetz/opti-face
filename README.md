@@ -7,7 +7,7 @@ opti-face provides a robust, easy to implement, and hard-to-mess-up interface fo
 ## Installation
 Fork this opti-face, and clone it to your local machine.
 ```bash
-git clone https://github.com/your-username/your-fork.git
+git clone https://github.com/your-username/opti-face.git your-fork
 ```
 Navigate to your local clone of your fork.
 ```bash
