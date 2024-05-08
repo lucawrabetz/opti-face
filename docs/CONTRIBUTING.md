@@ -60,6 +60,17 @@ The development process assumes that you have a basic familiarity with contribut
     pre-commit run --all-files
     ```
 
+5. Submit your contribution, pushing it to your fork and then opening a pull request:
+- Push your branch to your fork:
+    ```bash
+    git push origin bugfix-for-issue-1234
+    ```
+- Go to GitHub. The new branch will show up with a green Pull Request button go ahead and click it!
+- TODO: [add PR template](https://github.com/lucawrabetz/opti-face/issues/6), [add PR creation style guides](https://github.com/lucawrabetz/opti-face/issues/4)
+
+6. Review process:
+- TODO: [add review process guidelines and instructions](https://github.com/lucawrabetz/opti-face/issues/4)
+
 ## Documentation and other discussions
 We currently use GitHub to host all documentation, designs and other project-related files (see /docs). Any other project-related files or discussions that are hosted elsewhere will be linked to from here when they are created.
 
