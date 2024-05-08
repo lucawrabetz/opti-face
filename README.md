@@ -20,9 +20,9 @@ Set up your local environment.
 conda env create -f requirements/environment.yml
 conda activate opti-face
 ```
+TODO: see [pip environment issue](https://github.com/lucawrabetz/opti-face/issues/3).
 ```bash
 # or using venv and pip
-# TODO: see [pip environment issue](https://github.com/lucawrabetz/opti-face/issues/3).
 ```
 
 Complete your *opti-fork implementation to-do list*.
