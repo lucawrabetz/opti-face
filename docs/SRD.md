@@ -72,3 +72,5 @@ Opti-face is conceived as an interface of abstract data structures, that upon im
 - The system should be intuitive for both end-users and implementers, requiring minimal training for the former and easy configurability for the latter.
 - Detailed tutorials and user guides will facilitate easy system navigation and feature utilization.
 - Minimize configuration steps for implementers, ensuring that implementation instructions are straightforward and well-documented.
+
+TODO: Add more details to meet Standard IEEE 830-1998.
