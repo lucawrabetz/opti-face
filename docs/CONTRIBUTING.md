@@ -52,6 +52,12 @@ The development process assumes that you have a basic familiarity with contribut
 3. Test your contribution locally:
 - TODO: [add testing instructions](https://github.com/lucawrabetz/opti-face/issues/5)
 
+4. Ensure proper formatting!
+- If you installed the pre-commit hooks, you already have formatting checks and fixes at every commit. If the hooks catch any formatting errors, the appropriate fixes will be applied automatically - just remember `git add` and `git commit` again.
+- If you chose not to install the pre-commit hooks, or if the above doesn't work for some reason, just run the following command before committing, remembering to re-stage any ensuing changes:
+    ```base
+    pre-commit run --all-files
+    ```
 
 ## Documentation and other discussions
 We currently use GitHub to host all documentation, designs and other project-related files (see /docs). Any other project-related files or discussions that are hosted elsewhere will be linked to from here when they are created.
