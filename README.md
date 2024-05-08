@@ -8,22 +8,26 @@ opti-face provides a robust, easy to implement, and hard-to-mess-up interface fo
 Fork this opti-face, and clone it to your local machine.
 ```bash
 git clone https://github.com/your-username/your-fork.git
-
+```
+Navigate to your local clone of your fork.
+```bash
 cd your-fork
 ```
 
 Set up your local environment.
-**Using Conda**
 ```bash
+# using conda
 conda env create -f requirements/environment.yml
-
 conda activate opti-face
+```
+```bash
+# or using venv and pip
+# TODO: see [pip environment issue](https://github.com/lucawrabetz/opti-face/issues/3).
 ```
 
 Complete your *opti-fork implementation to-do list*.
 
 1. TODO: See [fork instructions issue](https://github.com/lucawrabetz/opti-face/issues/1).
-
 
 ## Usage
 
@@ -36,5 +40,5 @@ See [CODE_OF_CONDUCT.md](docs/CODE_OF_CONDUCT.md).
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Contact 
+## Contact
 If you have any questions, please feel free to contact me at wrabetzluca@gmail.com.
