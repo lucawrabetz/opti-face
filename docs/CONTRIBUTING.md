@@ -55,7 +55,7 @@ The development process assumes that you have a basic familiarity with contribut
 4. Ensure proper formatting!
 - If you installed the pre-commit hooks, you already have formatting checks and fixes at every commit. If the hooks catch any formatting errors, the appropriate fixes will be applied automatically - just remember `git add` and `git commit` again.
 - If you chose not to install the pre-commit hooks, or if the above doesn't work for some reason, just run the following command before committing, remembering to re-stage any ensuing changes:
-    ```base
+    ```bash
     pre-commit run --all-files
     ```
 
