@@ -16,6 +16,9 @@ Opti-face is intended to serve as a customizable framework that can be adapted t
 **Product Perspective**:
 Opti-face is conceived as an interface of abstract data structures, that upon implementation provides a fully functional standalone framework that integrates seamlessly with existing research tools and data management systems. It operates within the broader ecosystem of scientific computing tools, enhancing and not replacing tools used for specific analytical tasks or data manipulation.
 
+**Complementary Functionality**:
+Opti-face is designed to complement existing open-source tools like Google's OR-Tools by providing functionalities that bridge gaps in automated multiple runs, integrated data storage, and in-depth data exploration and visualization. The platform focuses on usability and integrates multiple aspects of the optimization workflow into a single interface. This not only makes it a more intuitive and smoother experience for users but also offers a more adaptable solution that can be broadly applicable across different domains.
+
 **Product Functions**:
 *(requires implementation)* - indicates a component that is comprised of an abstract interface, which must be implemented by the user following our instructions.
 *(turn-key)* - indicates a component that is fully functional once all components marked as *(requires implementation)* are correctly implemented.
