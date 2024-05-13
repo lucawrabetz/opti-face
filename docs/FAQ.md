@@ -1,8 +1,8 @@
 # Design FAQs
 
-## Protobuf and Python circularity code-smell: it seems that the flow of the application is designed with a circular, potentially redundant structure. The implementer configures the data model by using the PBobject-generating python scripts, but any PBobject is wrapped in Python classes when it is used in a Python-implemented component of the application. Can we still justify this design?
+**Q: Protobuf and Python circularity code-smell: it seems that the flow of the application is designed with a circular, potentially redundant structure. The implementer configures the data model by using the PBobject-generating python scripts, but any PBobject is wrapped in Python classes when it is used in a Python-implemented component of the application. Can we still justify this design?**
 
-This type of situation does arise in systems where you're trying to bridge the gap between user-friendly configuration and system-level serialization requirements, especially when aiming for cross-language compatibility and strict type consistency. Here’s a breakdown to clarify the roles and justify the structure:
+*A: This type of situation does arise in systems where you're trying to bridge the gap between user-friendly configuration and system-level serialization requirements, especially when aiming for cross-language compatibility and strict type consistency. Here’s a breakdown to clarify the roles and justify the structure:*
 
 ### Purpose of Each Component:
 
