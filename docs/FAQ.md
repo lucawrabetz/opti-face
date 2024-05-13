@@ -30,8 +30,7 @@ While it might seem that the design is circular—Python creating protobufs and 
 
 - **Justification**: This design ensures flexibility and usability while maintaining the robustness and cross-language capabilities provided by protobufs. It separates concerns by distinguishing between configuration, data structuring, and functional interfacing.
 - **Potential Revisions**: Consider whether:
-    - **Integration Tightness**: Could the layers be more tightly integrated? For instance, could the Python wrappers generate PB objects directly, skipping the PB wrapper functions?
-    - **Abstraction Level**: Is there an intermediate layer that could be removed or combined? Perhaps the PB wrapper functions could be part of the Python wrappers, making them more directly responsible for generating their PB counterparts.
+    - **Integration Tightness**: Could the layers be more tightly integrated? See the [discussion](https://github.com/lucawrabetz/opti-face/discussions/13) on this topic for more details (or if you have any comments).
 
 ### Conclusion
 
