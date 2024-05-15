@@ -1,7 +1,17 @@
-blank_issues_enabled: false
+blank_issues_enabled: true
 issue_templates:
   - name: Documentation Improvement
     about: Suggest or complete an improvement to project documentation.
     title: "Documentation: [Improvement Details]"
     labels: documentation
+    assignees: ''
+  - name: General Issue
+    about: Raise a general issue, discussion, or question
+    title: ''
+    labels:
+    assignees: ''
+  - name: Bug report
+    about: Create a report to help us improve
+    title: '[BUG]'
+    labels: bug
     assignees: ''
