@@ -1,5 +1,5 @@
 # opti-face :-)
-An suite of tools for automating experiments in computational research.
+A suite of tools for automating experiments in computational research.
 
 ## Description
 opti-face provides a robust, easy to implement, and hard-to-mess-up interface for a computational problem, any algorithms that may be used to solve it, and all data auxiliary to the process of analyzing them. Upon following the steps in [Installation](#installation), a user will immediately have access to robust automations to run experiments, a secure database that automagically sets itself up, and a growing suite of post-processing tools.
