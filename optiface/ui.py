@@ -7,6 +7,7 @@ from optiface.utils import _DATETIME_FORMAT
 
 _SPECIAL_CHAR = "-"
 _OPTIFACE_UI_EMOJI = " :-] "
+_PRECISION = 2
 
 
 def blank_line() -> None:
@@ -39,17 +40,17 @@ def format_numbers_in_string(msg: str) -> str:
     return pattern.sub(repl, msg)
 
 
-def opti_indentstring() -> str:
-    return (
-        f"{_OPTIFACE_UI_EMOJI} [{datetime.datetime.now().strftime(_DATETIME_FORMAT)}] "
-    )
+def opti_indentstring(time: bool = True) -> str:
+    if time:
+        return f"{_OPTIFACE_UI_EMOJI} [{datetime.datetime.now().strftime(_DATETIME_FORMAT)}] "
+    return f"{_OPTIFACE_UI_EMOJI} "
 
 
 def header(msg: str) -> None:
     blank_line()
     separator_block()
     msg = format_numbers_in_string(msg)
-    print(f"{msg}.")
+    print(f"{opti_indentstring(time=False)}{msg}...")
     separator_block()
     blank_line()
 
@@ -57,7 +58,7 @@ def header(msg: str) -> None:
 def subheader(msg: str) -> None:
     msg = format_numbers_in_string(msg)
     blank_line()
-    print(f"{msg}.")
+    print(f"{opti_indentstring(time=False)}{msg}...")
     blank_line()
 
 
