@@ -1,9 +1,8 @@
 import logging
-import logging.config
 import warnings
 
-from typing import Any, List, Dict, Tuple, Type, Optional
 from optiface import ui
+from typing import Any, Dict, List, Optional, Tuple, Type
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -42,7 +41,7 @@ class Feature:
         default: Any = 100.0,
         feature_type: Type = float,
         output_names: OutputNames = None,
-        # TODO: Allowed values should be replaced by the type just being enum.
+        # TODO: Allowed values should be replaced by the type just being enum (issue #5 in okc repo).
         allowed_values: List[Any] = None,
     ) -> None:
         """
