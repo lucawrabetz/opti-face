@@ -44,11 +44,12 @@ class KeyFeature:
 
     def print(self) -> None:
         ui.body(f"Name: {self.name}")
-        ui.subheader("Parameters")
-        for param in self.parameters:
-            param.print()
         ui.body(f"Pretty Output Name: {self.pretty_output_name}")
         ui.body(f"Compressed Output Name: {self.compressed_output_name}")
+        ui.subheader(f"Parameters of {self.name}")
+        for param in self.parameters:
+            param.print()
+        ui.blank_line()
 
 
 def main():

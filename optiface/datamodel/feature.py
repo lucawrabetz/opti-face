@@ -41,8 +41,6 @@ class Feature:
         default: Any = 100.0,
         feature_type: Type = float,
         output_names: OutputNames = None,
-        # TODO: Allowed values should be replaced by the type just being enum (issue #5 in okc repo).
-        allowed_values: List[Any] = None,
     ) -> None:
         """
         self.set_default_and_type handles type checking for default value.
@@ -53,7 +51,6 @@ class Feature:
         self._output_names: OutputNames
         self.set_names(name, output_names)
         self.set_default_and_type(default, feature_type)
-        self.set_allowed_values(allowed_values)
 
     def print(self) -> None:
         ui.body(f"Name: {self.name}")
@@ -61,7 +58,7 @@ class Feature:
         ui.body(f"Default: {self.default}")
         ui.body(f"Pretty Output Name: {self.pretty_output_name}")
         ui.body(f"Compressed Output Name: {self.compressed_output_name}")
-        ui.body(f"Allowed Values: {self.allowed_values}")
+        ui.blank_line()
 
     @property
     def name(self) -> str:
@@ -106,18 +103,6 @@ class Feature:
             )
         self._type = type(default)
         self._default = default
-
-    def set_allowed_values(self, allowed_values: Optional[List[Any]]) -> None:
-        if allowed_values is None:
-            self.allowed_values = []
-            return
-        # static typing says Any for the values, but we check them here
-        for v in allowed_values:
-            if type(v) != self._type:
-                raise TypeError(
-                    f"Allowed value {v} does not match feature type {self._type}"
-                )
-        self.allowed_values = allowed_values
 
 
 def main() -> None:
