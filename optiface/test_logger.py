@@ -8,15 +8,14 @@ logger = logging.getLogger(__name__)
 
 
 def test_logging():
-    logger.debug("debug message")
-    logger.info("info message")
-    logger.warning("warn message")
-    logger.error("error message")
-    logger.critical("critical message")
     ui.header("This is a header")
     ui.subheader("This is a subheader")
     ui.special("This is a special message")
     ui.body("This is a body message")
+    logger.info("diagnostic info for developer or implementer.")
+    logger.debug("diagnostic debug for developer or implementer.")
+    logger.warning("warning we can't do anything about but should be noted.")
+    warnings.warn("avoidable warning that we can do something about.")
 
 
 if __name__ == "__main__":
