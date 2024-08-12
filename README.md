@@ -5,7 +5,7 @@ A suite of tools for automating experiments in computational research.
 opti-face provides a robust, easy to implement, and hard-to-mess-up interface for a computational problem, any algorithms that may be used to solve it, and all data auxiliary to the process of analyzing them. Upon following the steps in [Installation](#installation), a user will immediately have access to robust automations to run experiments, a secure database that automagically sets itself up, and a growing suite of post-processing tools.
 
 ## Installation
-Fork this opti-face, and clone it to your local machine.
+Fork this repository and clone it to your local machine.
 ```bash
 git clone https://github.com/your-username/opti-face.git your-fork
 ```
