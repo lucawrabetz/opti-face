@@ -25,7 +25,17 @@ SET_NAME = Feature(
     output_names=OutputNames("Set Name", "s_n"),
 )
 
-INSTANCE_REP = Feature(
+# Implementer: parameter example for knapsack example - n number of items.
+N = Feature(
+    name="n",
+    # TODO: decide on default for features like this - required, should not really have a default at all in a sense.
+    # using -1 for now.
+    default=-1,
+    feature_type=int,
+    output_names=OutputNames("Number of Items", "n"),
+)
+
+REP = Feature(
     name="instance_rep",
     default=0,
     feature_type=int,
@@ -54,7 +64,7 @@ INSTANCE_KEY = KeyFeature(
     name="instance_key",
     parameters=[
         SET_NAME,
-        INSTANCE_REP,
+        REP,
     ],
     output_names=OutputNames("Instance Key", "i_key"),
 )
@@ -87,7 +97,7 @@ TIME = Feature(
 FEATURES = [
     RUN_ID,
     SET_NAME,
-    INSTANCE_REP,
+    REP,
     SOLVER,
     OBJECTIVE,
     TIME,
