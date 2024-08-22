@@ -6,7 +6,7 @@ from abc import abstractmethod
 from typing import Any
 
 from optiface import ui
-from optiface.datamodel import Feature
+from optiface.datamodel.feature import Feature
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -17,30 +17,28 @@ class IInstance(ABC):
     Interface for an instance of the computational problem.
     """
 
-    def __init__(self, set_name: str, rep: int):
-        self._set_name: str = set_name
-        self._rep: int = rep
-        # TODO: see issue #17.
-        self._parameters: dict[Feature, Any]
+    def __init__(self, parameters: dict[str, tuple[Feature, Any]]):
+        # TODO (LW / PS): I think make sure set_name is first parameter and rep is last parameter (out of instance parameters). Related - enforcing required / starting parameters (starting schema), but not let anyone change it, and certain orders either.
+        # TODO (LW / PS): align parameters with featureset - see issue #17.
+        self._parameters: dict[str, tuple[Feature, Any]] = parameters
         self._filename: str
         self.set_filename()
 
     def set_filename(self):
-        param_string = "_".join([v for v in self._parameters.values()])
-        self._filename = "-".join([self._set_name, param_string, str(self._rep)])
+        self._filename = "_".join([v[1] for v in self._parameters.values()])
 
     @property
-    def set_name(self):
-        return self._set_name
+    def filename(self):
+        return self._filename
 
-    @property
-    def rep(self):
-        return self._rep
-
-    @property
-    def filepath(self):
-        return os.path.join(self._filename, ".csv")
+    def print_instancekey(self):
+        print_string = "; ".join([f"{k}: {v[1]}" for k, v in self._parameters.items()])
+        ui.body(f"Instance - {print_string}")
 
     @abstractmethod
     def read(self):
+        pass
+
+    @abstractmethod
+    def print_data(self):
         pass
