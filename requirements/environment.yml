@@ -3,6 +3,7 @@ channels:
   - defaults
   - conda-forge
 dependencies:
-  - python=3.12
-  - numpy=1.20.*
-  - pandas=1.4.*
+  - python=3.12.*
+  - numpy=2.1.*
+  - pandas=2.2.*
+  - sqlmodel=0.0.21
