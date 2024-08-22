@@ -97,6 +97,7 @@ TIME = Feature(
 FEATURES = [
     RUN_ID,
     SET_NAME,
+    N,
     REP,
     SOLVER,
     OBJECTIVE,
