@@ -17,6 +17,12 @@ class KnapsackInstance(IInstance):
 
 
 def main() -> None:
+    # TODO: Alvin / Peter - can you advise on style:
+    # There are many instances where we have tuple[Feature, Any]
+    # There are many instances where we have dict[str, tuple[Feature, Any]]
+    # Should we create a type alias for these?
+    # Should we create a class for these?
+    # I will refactor as part of this PR following your comments :)
     params: dict[str, tuple[Feature, Any]] = {i.name: (i, i.default) for i in FEATURES}
     instance = KnapsackInstance(params)
     instance.print_instancekey()
