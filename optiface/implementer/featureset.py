@@ -25,11 +25,11 @@ SET_NAME = Feature(
     output_names=OutputNames("Set Name", "s_n"),
 )
 
-INSTANCE_ID = Feature(
-    name="instance_id",
+INSTANCE_REP = Feature(
+    name="instance_rep",
     default=0,
     feature_type=int,
-    output_names=OutputNames("Instance ID", "i_id"),
+    output_names=OutputNames("Instance Rep", "i_rep"),
 )
 
 
@@ -54,7 +54,7 @@ INSTANCE_KEY = KeyFeature(
     name="instance_key",
     parameters=[
         SET_NAME,
-        INSTANCE_ID,
+        INSTANCE_REP,
     ],
     output_names=OutputNames("Instance Key", "i_key"),
 )
@@ -87,7 +87,7 @@ TIME = Feature(
 FEATURES = [
     RUN_ID,
     SET_NAME,
-    INSTANCE_ID,
+    INSTANCE_REP,
     SOLVER,
     OBJECTIVE,
     TIME,
