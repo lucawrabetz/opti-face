@@ -2,7 +2,7 @@ import os
 
 # TODO: should this be on one of the problem classes, or as well, or removed from here.
 _FORKNAME = "onlinekcenter"
-_DAT_DIR = "dat"
+_DAT_DIR = "instances"
 _RESULTS_DIR = "out"
 _LOGS_DIR = "logs"
 _FINAL_FILE = "final.csv"
