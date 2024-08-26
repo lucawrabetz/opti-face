@@ -2,7 +2,7 @@ import os
 from typing import Any
 
 from optiface.datamodel.feature import Feature, FeatureDict
-from optiface.implementer.featureset import FEATURES
+from optiface.implementer.featureset import INSTANCE_PARAMETERS
 from optiface.interface.iinstance import IInstance
 from optiface.paths import _DAT_DIR
 
@@ -31,7 +31,7 @@ class KnapsackInstance(IInstance):
 
 
 def main() -> None:
-    params: FeatureDict = {i.name: (i, i.default) for i in FEATURES}
+    params: FeatureDict = {i.name: (i, i.default) for i in INSTANCE_PARAMETERS}
     instance = KnapsackInstance(params)
     instance.print_instancekey()
 
