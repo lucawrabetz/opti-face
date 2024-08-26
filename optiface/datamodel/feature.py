@@ -2,7 +2,7 @@ import logging
 import warnings
 
 from optiface import ui
-from typing import Any, Dict, List, Optional, Tuple, Type
+from typing import Any, Dict, List, Optional, Tuple, Type, TypeAlias
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
@@ -103,6 +103,11 @@ class Feature:
             )
         self._type = type(default)
         self._default = default
+
+
+# TODO: shoud we restrict Any to be a union of possible types? This is probably unnecessary but let's revisit...
+FeatureValue: TypeAlias = tuple[Feature, Any]
+FeatureDict: TypeAlias = dict[str, FeatureValue]
 
 
 def main() -> None:

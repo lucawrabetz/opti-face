@@ -6,7 +6,7 @@ from abc import abstractmethod
 from typing import Any
 
 from optiface import ui
-from optiface.datamodel.feature import Feature
+from optiface.datamodel.feature import Feature, FeatureDict
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -17,10 +17,10 @@ class IInstance(ABC):
     Interface for an instance of the computational problem.
     """
 
-    def __init__(self, parameters: dict[str, tuple[Feature, Any]]) -> None:
+    def __init__(self, parameters: FeatureDict) -> None:
         # TODO (LW / PS): I think make sure set_name is first parameter and rep is last parameter (out of instance parameters). Related - enforcing required / starting parameters (starting schema), but not let anyone change it, and certain orders either.
         # TODO (LW / PS): align parameters with featureset - see issue #17.
-        self._parameters: dict[str, tuple[Feature, Any]] = parameters
+        self._parameters: FeatureDict = parameters
         self._filename: str
         self.set_filename()
 
