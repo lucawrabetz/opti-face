@@ -49,12 +49,13 @@ FeatureDict: TypeAlias = dict[str, FeatureValue]
 
 
 def main() -> None:
-    SET_NAME = Feature(
-        name="set_name",
-        default="test",
-        feature_type=str,
-        output_names=("Set Name", "s_n"),
-    )
+    feature_data: dict[str, Any] = {
+        "name": "set_name",
+        "default": "test",
+        "feature_type": str,
+        "output_names": ("Set Name", "s_n"),
+    }
+    SET_NAME = Feature(**feature_data)
     ui.header("Declaring a feature")
     ui.subheader("Set Name Example Feature")
     SET_NAME.print()
