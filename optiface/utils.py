@@ -1,7 +1,7 @@
 from datetime import datetime
 import os
 
-from gurobipy import Model
+# from gurobipy import Model
 
 from optiface.constants import _DATE_FORMAT, _DATETIME_FORMAT
 from optiface.paths import _LOGS_DIR
@@ -25,8 +25,9 @@ def throwaway_gurobi_model() -> None:
     Create an empty gurobi model and destroy it.
     This is a hacky workaround to get rid of the dreaded "academic license", and "set parameter username" printouts from gurobi which also print twice in this case because of the log config. These only print the first time gurobi is called in memory. Just call this function from any class that runs a series of gurobi models in the __init__ method to ensure your logging works as expected and is readable.
     """
-    model = Model("fake")
-    del model
+    # model = Model("fake")
+    # del model
+    pass
 
 
 def gurobi_log_file() -> str:
