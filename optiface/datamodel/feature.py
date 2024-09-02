@@ -19,8 +19,8 @@ class Feature(BaseModel):
     # TODO: at this point defining Feature, while using pydantic and BaseModel, is a huge code smell to me.
     # The main reason I am defining Feature as a BaseModel is because we can use pydantic's create_model to add Features dynamically on the optiface side, when this happens on the database side.
     # However, it seems to me that everything in Feature is already defined in pydantic's Field, then the whole "FeatureSet" or "Row of ResultsTable" could be a pydantic BaseModel.
-    _PRETTY_KEY: int = 0
-    _SHORT_KEY: int = 1
+    _PRETTY_IDX: int = 0
+    _SHORT_IDX: int = 1
     name: str
     default: Any
     feature_type: Type
@@ -36,11 +36,11 @@ class Feature(BaseModel):
 
     @property
     def pretty(self) -> str:
-        return self.output_names[self._PRETTY_KEY]
+        return self.output_names[self._PRETTY_IDX]
 
     @property
     def short(self) -> str:
-        return self.output_names[self._SHORT_KEY]
+        return self.output_names[self._SHORT_IDX]
 
 
 # TODO: shoud we restrict Any to be a union of possible types? This is probably unnecessary but let's revisit...
