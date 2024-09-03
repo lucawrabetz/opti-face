@@ -7,18 +7,8 @@ from optiface.datamodel import feature
 from optiface.implementer import featureset
 from optiface.implementer import instance
 
-
-# replace to import from featureSET
-INSTANCE_KEY: feature.GroupKey = {
-    "set_name": featureset.SET_NAME,
-    "n": featureset.N,
-    "instance_rep": featureset.REP,
-}
-
-SOLVER_KEY: feature.GroupKey = {
-    "solver": featureset.SOLVER,
-    "my_solver_parameter": featureset.SOME_SOLVER_PARAMETER,
-}
+INSTANCE_KEY = featureset.FEATURE_SET.instance_key
+SOLVER_KEY = featureset.FEATURE_SET.solver_key
 
 
 def file_path_to_instance_id(file_path: str) -> feature.FeatureValueDict:

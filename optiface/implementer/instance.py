@@ -36,7 +36,7 @@ PROBLEM_INSTANCE = KnapsackInstance
 
 def main() -> None:
     params: feature.FeatureValueDict = {
-        i.name: (i, i.default) for i in featureset.INSTANCE_PARAMETERS
+        i.name: (i, i.default) for i in featureset.FEATURE_SET.instance_key
     }
     kpinstance = KnapsackInstance()
     kpinstance.configure(parameters=params)
