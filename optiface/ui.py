@@ -50,7 +50,7 @@ def header(msg: str) -> None:
     blank_line()
     separator_block()
     msg = format_numbers_in_string(msg)
-    print(f"{opti_indentstring(time=False)}{msg}...")
+    print(f"{opti_indentstring(time=False)}{msg}")
     separator_block()
     blank_line()
 
@@ -58,15 +58,15 @@ def header(msg: str) -> None:
 def subheader(msg: str) -> None:
     msg = format_numbers_in_string(msg)
     blank_line()
-    print(f"{opti_indentstring(time=False)}{msg}...")
+    print(f"{opti_indentstring(time=False)}{msg}")
     blank_line()
 
 
 def special(msg: str) -> None:
     msg = format_numbers_in_string(msg)
-    print(f"{opti_indentstring()}--> {msg}! <--")
+    print(f"{opti_indentstring()}--> {msg} <--")
 
 
 def body(msg: str) -> None:
     msg = format_numbers_in_string(msg)
-    print(f"{opti_indentstring()}-> {msg}.")
+    print(f"{opti_indentstring()}-> {msg}")
