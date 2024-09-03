@@ -1,6 +1,6 @@
 from enum import Enum
-from optiface.datamodel.feature import Feature
-from optiface.datamodel.keyfeature import KeyFeature
+from optiface.datamodel.feature import Feature, GroupKey
+from optiface.implementer import instance
 
 
 # Implementer: define your enum types here:
@@ -59,27 +59,6 @@ SOME_SOLVER_PARAMETER = Feature(
     output_names=("My Solver Parameter", "m_sp"),
 )
 
-# Implementer: make sure your instance / solver features are all in the instance / solver key.
-INSTANCE_KEY = KeyFeature(
-    name="instance_key",
-    parameters=[
-        SET_NAME,
-        REP,
-    ],
-    output_names=("Instance Key", "i_key"),
-)
-
-SOLVER_KEY = KeyFeature(
-    name="solver_key",
-    parameters=[
-        SOLVER,
-        SOME_SOLVER_PARAMETER,
-    ],
-    output_names=("Solver Key", "s_key"),
-)
-
-# Implementer: add all your output features here.
-
 OBJECTIVE = Feature(
     name="objective",
     default=-1.0,
@@ -119,17 +98,21 @@ OUTPUTS = [
     TIME,
 ]
 
-KEYS = [
-    INSTANCE_KEY,
-    SOLVER_KEY,
-]
+INSTANCE_KEY: GroupKey = {
+    "set_name": SET_NAME,
+    "n": N,
+    "instance_rep": REP,
+}
+
+SOLVER_KEY: GroupKey = {
+    "solver": SOLVER,
+    "my_solver_parameter": SOME_SOLVER_PARAMETER,
+}
 
 
 def main() -> None:
     for feature in FEATURES:
         feature.print()
-    for key in KEYS:
-        key.print()
 
 
 if __name__ == "__main__":

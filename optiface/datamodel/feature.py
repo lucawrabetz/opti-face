@@ -44,8 +44,10 @@ class Feature(BaseModel):
 
 
 # TODO: shoud we restrict Any to be a union of possible types? This is probably unnecessary but let's revisit...
-FeatureValue: TypeAlias = tuple[Feature, Any]
-FeatureDict: TypeAlias = dict[str, FeatureValue]
+GroupKey: TypeAlias = dict[str, Feature]
+FeatureValuePair: TypeAlias = tuple[Feature, Any]
+FeatureValueDict: TypeAlias = dict[str, FeatureValuePair]
+PathIdPair: TypeAlias = tuple[str, FeatureValueDict]
 
 
 def main() -> None:
