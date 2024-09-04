@@ -7,8 +7,8 @@ from optiface.datamodel import feature
 from optiface.implementer import featureset
 from optiface.implementer import instance
 
-INSTANCE_KEY = featureset.FEATURE_SET.instance_key
-SOLVER_KEY = featureset.FEATURE_SET.solver_key
+INSTANCE_KEY = featureset.FEATURE_SPINE.instance_key
+SOLVER_KEY = featureset.FEATURE_SPINE.solver_key
 
 
 def file_path_to_instance_id(file_path: str) -> feature.FeatureValueDict:

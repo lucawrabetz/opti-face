@@ -23,10 +23,8 @@ YML_FEATURE_TYPE_MAP: dict[str, Type] = {
 }
 
 
-# TODO: this is the current base API for the feature set.
-# - could be cool to call it a "Spine" or something like that, see design diagram too to make it align.
-# - it would be nice if it could return the group keys for the library to use, with or without database integration overhead ?
-class FeatureSet:
+# TODO: would like to move this class to optiface/datamodel/feature.py but it depends on SolverType which is here and should not be in datamodel/feature.py as it should be declared by the implementer. Ideally would like the SolverType enum to be encoded in the yaml file as well, so the implementer can add their solver types there. Not sure what the right way to do this is.
+class FeatureSpine:
     def __init__(self):
         self.featureset: dict[str, feature.GroupKey] = {}
 
@@ -66,14 +64,12 @@ class FeatureSet:
                 feature.print()
 
 
-# TODO: Database discussions - run id not a key, because it represents the whole row, so it is easy to cross match with metadata with the integers 0,...,n, where n is the number of rows in the results data.
-
-FEATURE_SET = FeatureSet()
-FEATURE_SET.read_yml(paths.FEATURE_SET_YML_PATH)
+FEATURE_SPINE = FeatureSpine()
+FEATURE_SPINE.read_yml(paths.FEATURE_SET_YML_PATH)
 
 
 def main() -> None:
-    FEATURE_SET.print()
+    FEATURE_SPINE.print()
 
 
 if __name__ == "__main__":
