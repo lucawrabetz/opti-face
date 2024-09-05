@@ -7,3 +7,4 @@ dependencies:
   - numpy=2.1.*
   - pandas=2.2.*
   - sqlmodel=0.0.21
+  - pyyaml=6.0
