@@ -1,1 +1,4 @@
 opti-face
+db/*
+__pycache__
+experiments/*
