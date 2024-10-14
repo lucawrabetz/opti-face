@@ -25,7 +25,7 @@ YML_FEATURE_TYPE_MAP: dict[str, Type] = {
 
 # TODO: would like to move this class to optiface/datamodel/feature.py but it depends on SolverType which is here and should not be in datamodel/feature.py as it should be declared by the implementer. Ideally would like the SolverType enum to be encoded in the yaml file as well, so the implementer can add their solver types there. Not sure what the right way to do this is.
 class FeatureSpine:
-    def __init__(self):
+    def __init__(self) -> None:
         self.featureset: dict[str, feature.GroupKey] = {}
 
     def read_yml(self, yml_path: str) -> None:
@@ -37,7 +37,9 @@ class FeatureSpine:
             for group_name, group_data in yml_data["featureset"].items():
                 group: feature.GroupKey = {}
                 for feature_name, feature_data in group_data.items():
-                    feature_type = YML_FEATURE_TYPE_MAP[feature_data["feature_type"]]
+                    feature_type: type = YML_FEATURE_TYPE_MAP[
+                        feature_data["feature_type"]
+                    ]
                     new_feature = feature.Feature(
                         name=feature_name,
                         default=feature_type(feature_data["default"]),

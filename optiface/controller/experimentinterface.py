@@ -26,19 +26,19 @@ class ComputationalExperiment:
         instance_pathidpairs: list[feature.PathIdPair],
         solver_ids: list[feature.FeatureValueDict],
         instance: iinstance.IInstance,
-    ):
+    ) -> None:
         ui.header("Configuring Experiment [opti-face]")
-        self.instance_pathidpairs = instance_pathidpairs
-        self.solver_ids = solver_ids
-        self.instance = instance
+        self.instance_pathidpairs: list[feature.PathIdPair] = instance_pathidpairs
+        self.solver_ids: list[feature.FeatureValueDict] = solver_ids
+        self.instance: iinstance.IInstance = instance
 
-    def single_run(self, solver_id: feature.FeatureValueDict):
+    def single_run(self, solver_id: feature.FeatureValueDict) -> None:
         ui.body("In a single run [opti-face]...")
         solver_description: str = ", ".join([str(k[1]) for k in solver_id.values()])
         ui.separator_line()
         ui.body(f"Running {solver_description} on {self.instance.filepath} [opti-face]")
 
-    def run(self):
+    def run(self) -> None:
         ui.subheader("Running an experiment [opti-face]...")
         for filepath, parameters in self.instance_pathidpairs:
             self.instance.configure(parameters, filepath)

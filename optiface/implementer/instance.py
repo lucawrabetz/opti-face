@@ -38,7 +38,7 @@ def main() -> None:
     params: feature.FeatureValueDict = {
         i.name: (i, i.default) for i in featureset.FEATURE_SPINE.instance_key
     }
-    kpinstance = KnapsackInstance()
+    kpinstance: KnapsackInstance = KnapsackInstance()
     kpinstance.configure(parameters=params)
 
 
