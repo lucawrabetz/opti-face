@@ -37,7 +37,7 @@ class FeatureSpine:
             for group_name, group_data in yml_data["featureset"].items():
                 group: feature.GroupKey = {}
                 for feature_name, feature_data in group_data.items():
-                    feature_type: type = YML_FEATURE_TYPE_MAP[
+                    feature_type: Type = YML_FEATURE_TYPE_MAP[
                         feature_data["feature_type"]
                     ]
                     new_feature = feature.Feature(
