@@ -23,12 +23,12 @@ from optiface.datamodel import feature
 class ComputationalExperiment:
     def configure(
         self,
-        instance_pathidpairs: list[feature.PathIdPair],
+        instance_path_id_pairs: list[feature.PathIdPair],
         solver_ids: list[feature.FeatureValueDict],
         instance: iinstance.IInstance,
     ) -> None:
         ui.header("Configuring Experiment [opti-face]")
-        self.instance_pathidpairs: list[feature.PathIdPair] = instance_pathidpairs
+        self.instance_path_id_pairs: list[feature.PathIdPair] = instance_path_id_pairs
         self.solver_ids: list[feature.FeatureValueDict] = solver_ids
         self.instance: iinstance.IInstance = instance
 
@@ -40,7 +40,7 @@ class ComputationalExperiment:
 
     def run(self) -> None:
         ui.subheader("Running an experiment [opti-face]...")
-        for filepath, parameters in self.instance_pathidpairs:
+        for filepath, parameters in self.instance_path_id_pairs:
             self.instance.configure(parameters, filepath)
             self.instance.read()
             ui.separator_line()
