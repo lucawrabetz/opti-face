@@ -19,33 +19,30 @@ class Feature(BaseModel):
     # TODO: at this point defining Feature, while using pydantic and BaseModel, is a huge code smell to me.
     # The main reason I am defining Feature as a BaseModel is because we can use pydantic's create_model to add Features dynamically on the optiface side, when this happens on the database side.
     # However, it seems to me that everything in Feature is already defined in pydantic's Field, then the whole "FeatureSet" or "Row of ResultsTable" could be a pydantic BaseModel.
-    _PRETTY_KEY: int = 0
-    _SHORT_KEY: int = 1
+    _PRETTY_IDX: int = 0
+    _SHORT_IDX: int = 1
     name: str
     default: Any
     feature_type: Type
     output_names: OutputNames
 
-    def print(self) -> None:
-        ui.body(f"Name: {self.name}")
-        ui.body(f"feature_type: {self.feature_type}")
-        ui.body(f"Default: {self.default}")
-        ui.body(f"Pretty Output Name: {self.pretty}")
-        ui.body(f"Compressed Output Name: {self.short}")
-        ui.blank_line()
+    def __str__(self) -> str:
+        return f"feature: {self.name}, type: {self.feature_type}, default: {self.default}, output name: {self.pretty} [{self.short}]"
 
     @property
     def pretty(self) -> str:
-        return self.output_names[self._PRETTY_KEY]
+        return self.output_names[self._PRETTY_IDX]
 
     @property
     def short(self) -> str:
-        return self.output_names[self._SHORT_KEY]
+        return self.output_names[self._SHORT_IDX]
 
 
 # TODO: shoud we restrict Any to be a union of possible types? This is probably unnecessary but let's revisit...
-FeatureValue: TypeAlias = tuple[Feature, Any]
-FeatureDict: TypeAlias = dict[str, FeatureValue]
+GroupKey: TypeAlias = dict[str, Feature]
+FeatureValuePair: TypeAlias = tuple[Feature, Any]
+FeatureValueDict: TypeAlias = dict[str, FeatureValuePair]
+PathIdPair: TypeAlias = tuple[str, FeatureValueDict]
 
 
 def main() -> None:
@@ -58,7 +55,7 @@ def main() -> None:
     SET_NAME = Feature(**feature_data)
     ui.header("Declaring a feature")
     ui.subheader("Set Name Example Feature")
-    SET_NAME.print()
+    ui.body(SET_NAME.__str__())
 
 
 if __name__ == "__main__":
