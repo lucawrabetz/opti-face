@@ -17,26 +17,30 @@ class IInstance(ABC):
     Interface for an instance of the computational problem.
     """
 
+    def __init__(self):
+        self._parameters: feature.FeatureValueDict
+        self._filepath: str
+
+    def __str__(self) -> str:
+        return f"Instance: {'; '.join([f'{k}: {v[1]}' for k, v in self._parameters.items()])}"
+
     def configure(
         self, parameters: feature.FeatureValueDict, filepath: str = ""
     ) -> None:
         # TODO (LW / PS): I think make sure set_name is first parameter and rep is last parameter (out of instance parameters). Related - enforcing required / starting parameters (starting schema), but not let anyone change it, and certain orders either.
         # TODO (LW / PS): align parameters with featureset - see issue #17.
-        self._parameters: feature.FeatureValueDict = parameters
-        self._filepath: str = filepath
+        self._parameters = parameters
+        self._filepath = filepath
         if self._filepath == "":
             ui.body(f"Configuring unsaved instance [opti-face]:")
-            self.print_instanceid()
+            ui.body(self.__str__())
         else:
             ui.body(f"Configuring instance from {filepath} [opti-face]:")
+            ui.body(self.__str__())
 
     @property
     def filepath(self) -> str:
         return self._filepath
-
-    def print_instanceid(self) -> None:
-        print_string = "; ".join([f"{k}: {v[1]}" for k, v in self._parameters.items()])
-        ui.body(f"Instance - {print_string} [opti-face]")
 
     @abstractmethod
     def read(self) -> None:
@@ -44,8 +48,4 @@ class IInstance(ABC):
 
     @abstractmethod
     def reset(self) -> None:
-        pass
-
-    @abstractmethod
-    def print_data(self) -> None:
         pass
